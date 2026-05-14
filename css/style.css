@@ -442,6 +442,43 @@ p, li {
   gap: 1rem;
 }
 
+/* ---------- Pitch callout (services / capabilities) ---------- */
+.pitch {
+  position: relative;
+  padding: 1.5rem 1.75rem 1.5rem 2rem;
+  margin: 2rem 0 0;
+  border-left: 4px solid var(--red);
+  background: var(--cream-soft);
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 56ch;
+}
+.pitch__lead {
+  display: block;
+  font-family: var(--display);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+/* ---------- Org / client mark (large name treatment) ---------- */
+.org-mark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.org-mark__star {
+  font-family: var(--display);
+  color: var(--red);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+}
+
 /* ---------- TODO badge for visible placeholders ---------- */
 .todo {
   display: inline-block;

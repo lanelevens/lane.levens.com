@@ -9,7 +9,7 @@ Plain HTML / CSS, hosted on GitHub Pages with the custom domain `lane.levens.com
 ```
 lane.levens.com/
 ├─ index.html         Home / hero
-├─ work.html          Portfolio
+├─ background.html    Experience: LACMA, Aleksandar, recognition
 ├─ about.html         Bio, experience, education, awards
 ├─ contact.html       Contact + commission info
 ├─ css/style.css      All styles (brand tokens at top)
