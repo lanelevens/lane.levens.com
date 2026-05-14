@@ -76,6 +76,19 @@ h3.display { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
 p { margin: 0 0 1em; }
 p:last-child { margin-bottom: 0; }
 
+/* Smarter line-breaking: balanced headlines, prettier prose endings. */
+h1, h2, h3, h4,
+.display,
+.eyebrow,
+.lede,
+.work-card__title,
+.experience-item__role {
+  text-wrap: balance;
+}
+p, li {
+  text-wrap: pretty;
+}
+
 /* ---------- Layout primitives ---------- */
 .container {
   width: 100%;
