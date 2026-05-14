@@ -351,7 +351,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--cream);
   padding-block: clamp(3rem, 7vw, 5.5rem);
 }
-.cta a { color: var(--red); }
+.cta a:not(.button) { color: var(--red); }
 .cta h2.display { color: var(--cream); }
 .cta__row {
   display: flex;
