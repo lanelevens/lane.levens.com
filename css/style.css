@@ -493,6 +493,31 @@ p, li {
   .service-logo img { height: 150px; }
 }
 
+/* Text-based Aleksandar wordmark (matches cncthecity.com lockup) */
+.service-logo--text {
+  color: var(--ink);
+}
+.alek-wordmark {
+  display: block;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 200;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  letter-spacing: 0.32em;
+  /* tracking adds right-side space; nudge the block left so it visually aligns */
+  text-indent: 0.32em;
+  line-height: 1;
+}
+.alek-subtitle {
+  display: block;
+  font-family: "Inter", -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  color: var(--muted);
+  margin-top: 0.4rem;
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
 /* ---------- TODO badge for visible placeholders ---------- */
 .todo {
   display: inline-block;
