@@ -479,18 +479,29 @@ p, li {
   line-height: 1;
 }
 
-/* ---------- Service / client logos ---------- */
+/* ---------- "Worked at" label ---------- */
+.work-label {
+  font-family: var(--body);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 0.85rem;
+}
+
+/* ---------- Service / workplace logos ---------- */
 .service-logo {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
 .service-logo img {
   display: block;
-  height: 110px;
+  height: 70px;
   width: auto;
 }
 @media (min-width: 720px) {
-  .service-logo img { height: 150px; }
+  .service-logo img { height: 90px; }
 }
 
 /* Text-based Aleksandar wordmark (matches cncthecity.com lockup) */
@@ -501,21 +512,21 @@ p, li {
   display: block;
   font-family: "Inter", -apple-system, sans-serif;
   font-weight: 200;
-  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   letter-spacing: 0.32em;
-  /* tracking adds right-side space; nudge the block left so it visually aligns */
-  text-indent: 0.32em;
+  /* absorb the trailing letter-spacing so the right edge aligns to the final R */
+  margin-right: -0.32em;
   line-height: 1;
 }
 .alek-subtitle {
   display: block;
   font-family: "Inter", -apple-system, sans-serif;
   font-weight: 400;
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
   color: var(--muted);
-  margin-top: 0.4rem;
+  margin-top: 0.45rem;
   letter-spacing: 0;
-  text-indent: 0;
+  text-align: right;
 }
 
 /* ---------- TODO badge for visible placeholders ---------- */
