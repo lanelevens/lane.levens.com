@@ -157,50 +157,25 @@ p, li {
 }
 .nav a:hover { color: var(--red); }
 
-/* ---------- Hero stage (layered content + big tilted star + masked red overlay) ---------- */
-.hero__inner {
+/* ---------- Hero lockup (name + star) ---------- */
+.hero__lockup {
   position: relative;
+  display: inline-block;
   isolation: isolate;
 }
-.hero__content {
+.hero__lockup h1 {
   position: relative;
-  z-index: 1;
-}
-
-/* The big tilted star, visible black, layered between normal text and the red overlay */
-.hero__big-star {
-  position: absolute;
-  /* size + placement — kept in CSS vars so the mask below stays in sync */
-  --bigstar-w: clamp(22rem, 68vw, 46rem);
-  --bigstar-top: clamp(2rem, 5vw, 4.5rem);
-  --bigstar-left: clamp(-6rem, -4vw, -1rem);
-  width: var(--bigstar-w);
-  height: var(--bigstar-w);
-  top: var(--bigstar-top);
-  left: var(--bigstar-left);
   z-index: 2;
-  pointer-events: none;
 }
-
-/* The duplicate text in red, masked to the same star shape + position so it shows
-   only where the star is — effectively flipping text color to red on the star. */
-.hero__content--red {
+.hero__star {
   position: absolute;
-  inset: 0;
-  z-index: 3;
+  right: -0.45em;       /* bleed past the right edge of LEVENS */
+  bottom: -0.15em;
+  width: clamp(7rem, 18vw, 18rem);
+  height: auto;
+  color: var(--ink);
+  z-index: 1;
   pointer-events: none;
-  -webkit-mask-image: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120" preserveAspectRatio="xMidYMid meet"%3E%3Cpolygon transform="rotate(-12 50 50)" points="50,4 62,38 98,38 69,58 79,94 50,72 21,94 31,58 2,38 38,38" fill="black"/%3E%3C/svg%3E');
-  mask-image: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120" preserveAspectRatio="xMidYMid meet"%3E%3Cpolygon transform="rotate(-12 50 50)" points="50,4 62,38 98,38 69,58 79,94 50,72 21,94 31,58 2,38 38,38" fill="black"/%3E%3C/svg%3E');
-  -webkit-mask-size: clamp(22rem, 68vw, 46rem) clamp(22rem, 68vw, 46rem);
-  mask-size: clamp(22rem, 68vw, 46rem) clamp(22rem, 68vw, 46rem);
-  -webkit-mask-position: clamp(-6rem, -4vw, -1rem) clamp(2rem, 5vw, 4.5rem);
-  mask-position: clamp(-6rem, -4vw, -1rem) clamp(2rem, 5vw, 4.5rem);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-.hero__content--red,
-.hero__content--red * {
-  color: var(--red) !important;
 }
 
 /* ---------- Hero subtitles ---------- */
