@@ -482,21 +482,15 @@ p, li {
 /* ---------- Service / client logos ---------- */
 .service-logo {
   display: inline-block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 .service-logo img {
   display: block;
-  height: 56px;
+  height: 110px;
   width: auto;
 }
-.service-logo--tile img {
-  /* Aleksandar logo sits on white — give it a small white card so it doesn't show edge */
-  background: #ffffff;
-  padding: 8px 10px;
-  border-radius: 2px;
-}
 @media (min-width: 720px) {
-  .service-logo img { height: 64px; }
+  .service-logo img { height: 150px; }
 }
 
 /* ---------- TODO badge for visible placeholders ---------- */
