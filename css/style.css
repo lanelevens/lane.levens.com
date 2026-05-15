@@ -50,6 +50,7 @@ button { font: inherit; cursor: pointer; }
   line-height: 0.86;
   text-transform: uppercase;
   color: var(--red);
+  margin: 0;
 }
 .display--ink { color: var(--ink); }
 
