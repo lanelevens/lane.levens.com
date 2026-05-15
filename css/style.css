@@ -481,17 +481,18 @@ p, li {
 
 /* ---------- Workplace block (logo + role + body) ---------- */
 .workplace {
-  padding: 2rem 0 0;
-  border-top: 2px solid var(--rule);
-  margin-top: 3rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
 }
 .workplace:first-of-type {
-  border-top: 0;
-  padding-top: 0;
   margin-top: 0;
 }
+.workplace__logo-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.75rem;
+}
 .workplace__body {
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 .workplace__role {
   font-family: var(--display);
