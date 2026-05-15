@@ -67,6 +67,10 @@ h3.display { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
   color: var(--ink);
 }
 .eyebrow--red { color: var(--red); }
+.eyebrow--lg {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  letter-spacing: 0.12em;
+}
 
 .lede {
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
@@ -157,50 +161,21 @@ p, li {
 }
 .nav a:hover { color: var(--red); }
 
-/* ---------- Hero stage (layered content + big tilted star + masked red overlay) ---------- */
-.hero__inner {
-  position: relative;
-  isolation: isolate;
+/* ---------- Hero lockup: LANE LEVENS + star on the right ---------- */
+.hero__lockup {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
+  flex-wrap: wrap;
 }
-.hero__content {
-  position: relative;
-  z-index: 1;
+.hero__lockup .display {
+  flex: 0 1 auto;
 }
-
-/* The big tilted star, visible black, layered between normal text and the red overlay */
 .hero__big-star {
-  position: absolute;
-  /* size + placement — kept in CSS vars so the mask below stays in sync */
-  --bigstar-w: clamp(22rem, 68vw, 46rem);
-  --bigstar-top: clamp(2rem, 5vw, 4.5rem);
-  --bigstar-left: clamp(-6rem, -4vw, -1rem);
-  width: var(--bigstar-w);
-  height: var(--bigstar-w);
-  top: var(--bigstar-top);
-  left: var(--bigstar-left);
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* The duplicate text in red, masked to the same star shape + position so it shows
-   only where the star is — effectively flipping text color to red on the star. */
-.hero__content--red {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-  -webkit-mask-image: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120" preserveAspectRatio="xMidYMid meet"%3E%3Cpolygon transform="rotate(-12 50 50)" points="50,4 62,38 98,38 69,58 79,94 50,72 21,94 31,58 2,38 38,38" fill="black"/%3E%3C/svg%3E');
-  mask-image: url('data:image/svg+xml;utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 120 120" preserveAspectRatio="xMidYMid meet"%3E%3Cpolygon transform="rotate(-12 50 50)" points="50,4 62,38 98,38 69,58 79,94 50,72 21,94 31,58 2,38 38,38" fill="black"/%3E%3C/svg%3E');
-  -webkit-mask-size: clamp(22rem, 68vw, 46rem) clamp(22rem, 68vw, 46rem);
-  mask-size: clamp(22rem, 68vw, 46rem) clamp(22rem, 68vw, 46rem);
-  -webkit-mask-position: clamp(-6rem, -4vw, -1rem) clamp(2rem, 5vw, 4.5rem);
-  mask-position: clamp(-6rem, -4vw, -1rem) clamp(2rem, 5vw, 4.5rem);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-.hero__content--red,
-.hero__content--red * {
-  color: var(--red) !important;
+  flex: 0 0 auto;
+  width: clamp(8rem, 20vw, 18rem);
+  height: auto;
+  color: var(--ink);
 }
 
 /* ---------- Hero subtitles ---------- */
