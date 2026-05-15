@@ -156,6 +156,27 @@ p, li {
 }
 .nav a:hover { color: var(--red); }
 
+/* ---------- Hero lockup (name + star) ---------- */
+.hero__lockup {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+.hero__lockup h1 {
+  position: relative;
+  z-index: 2;
+}
+.hero__star {
+  position: absolute;
+  right: -0.45em;       /* bleed past the right edge of LEVENS */
+  bottom: -0.15em;
+  width: clamp(7rem, 18vw, 18rem);
+  height: auto;
+  color: var(--ink);
+  z-index: 1;
+  pointer-events: none;
+}
+
 /* ---------- Hero subtitles ---------- */
 .hero__subtitle {
   font-family: var(--display);
