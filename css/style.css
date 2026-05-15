@@ -479,21 +479,40 @@ p, li {
   line-height: 1;
 }
 
-/* ---------- "Worked at" label ---------- */
-.work-label {
-  font-family: var(--body);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+/* ---------- Workplace block (logo + role + body) ---------- */
+.workplace {
+  padding: 2rem 0 0;
+  border-top: 2px solid var(--rule);
+  margin-top: 3rem;
+}
+.workplace:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+.workplace__body {
+  margin-top: 1.5rem;
+}
+.workplace__role {
+  font-family: var(--display);
+  font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: -0.005em;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1;
+  margin: 0;
+}
+.workplace__where {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   color: var(--muted);
-  font-weight: 600;
-  margin: 0 0 0.85rem;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+  max-width: 60ch;
 }
 
 /* ---------- Service / workplace logos ---------- */
 .service-logo {
   display: inline-block;
-  margin-bottom: 1.5rem;
 }
 .service-logo img {
   display: block;
