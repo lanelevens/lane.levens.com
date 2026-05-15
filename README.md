@@ -8,12 +8,9 @@ Plain HTML / CSS, hosted on GitHub Pages with the custom domain `lane.levens.com
 
 ```
 lane.levens.com/
-├─ index.html         Home / hero
-├─ background.html    Experience: LACMA, Aleksandar, recognition
-├─ about.html         Bio, experience, education, awards
-├─ contact.html       Contact + commission info
+├─ index.html         Single scrolling page (hero, work, collaborate, recognition, contact)
 ├─ css/style.css      All styles (brand tokens at top)
-├─ images/            Project photos (web-optimized)
+├─ images/            Photos (web-optimized)
 └─ CNAME              Custom domain for GitHub Pages
 ```
 
@@ -48,8 +45,4 @@ Defined as CSS custom properties at the top of `css/style.css`:
 
 ## Outstanding work (`TODO` markers in HTML)
 
-- Confirm whether **LACMA** experience should be included (mentioned in `info.txt` but not on resume).
-- Confirm the second scholarship from `info.txt` (placeholder name there).
-- Write copy for each portfolio project (description, technique, year).
-- Add photos for: Princess Desk, Aleksandar Inc. millwork, Coffeeshop Refurbishment, theater set work.
-- Optional: add the brand logo asset and headshot when ready.
+- Second scholarship name (currently placeholder).
