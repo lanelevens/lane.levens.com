@@ -463,6 +463,27 @@ p, li {
   color: var(--ink);
 }
 .contact-list--inline dd a:hover { color: var(--red); }
+
+/* ---------- Stacked contact (email / phone) ---------- */
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+.contact-stack a {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3vw, 2.25rem);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  width: fit-content;
+}
+.contact-stack a:hover { color: var(--red); }
 .contact-list dt {
   font-size: 0.78rem;
   letter-spacing: 0.14em;
