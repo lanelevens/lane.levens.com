@@ -1,6 +1,13 @@
 # Local-only project notes — not for GitHub
 CONTEXT.md
 
+# Local staging — never pushed to GitHub.
+# Use incoming/ for handoff materials (PDFs, design comps Lane sends),
+# work-in-progress drafts, local snapshots/backups, anything you want
+# to keep on disk but not publish. If a file matures and should go live,
+# move it OUT of incoming/ into the appropriate folder before committing.
+incoming/
+
 # Editor / OS
 .DS_Store
 .vscode/
